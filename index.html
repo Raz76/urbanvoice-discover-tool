@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UrbanVoice — Problem Discovery Engine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ===================== APP SHELL ===================== -->
+  <div id="app">
+
+    <!-- Progress dots (hidden on landing) -->
+    <div id="progress-bar" class="progress-bar hidden">
+      <div class="progress-dots" id="progress-dots"></div>
+    </div>
+
+    <!-- Screen container — JS swaps content here -->
+    <div id="screen-container">
+
+      <!-- ===================== SCREEN: LANDING ===================== -->
+      <div id="screen-landing" class="screen active">
+
+        <header class="landing-header">
+          <img src="Brand/logo_11.png" alt="UrbanVoice" class="logo" />
+        </header>
+
+        <main class="landing-main">
+          <div class="landing-hero">
+            <p class="hero-eyebrow">Problem Discovery Engine</p>
+            <h1 class="hero-headline">
+              Find Real Problems<br />Worth Solving
+            </h1>
+            <p class="hero-sub">
+              We scan Reddit, Amazon, Quora, and G2 for real complaints people are
+              posting right now — so you validate your idea before you build anything.
+            </p>
+          </div>
+
+          <div class="search-card">
+            <label class="search-label" for="idea-input">
+              What's your business idea or topic?
+            </label>
+            <p class="search-hint">
+              Be as broad or specific as you like. E.g. "productivity coaching for
+              freelancers" or "pet care" or "remote team communication".
+            </p>
+            <div class="search-row">
+              <input
+                type="text"
+                id="idea-input"
+                class="search-input"
+                placeholder="e.g. meal planning for busy parents…"
+                maxlength="200"
+                autocomplete="off"
+              />
+              <button id="btn-discover" class="btn-primary" disabled>
+                Discover Problems →
+              </button>
+            </div>
+            <p class="search-char-count"><span id="char-count">0</span> / 200</p>
+          </div>
+
+          <div class="trust-strip">
+            <div class="trust-item">
+              <span class="trust-icon">🔍</span>
+              <span>Real quotes from real people</span>
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon">📊</span>
+              <span>Frequency &amp; trend data per problem</span>
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon">💡</span>
+              <span>No-code business ideas matched to each problem</span>
+            </div>
+            <div class="trust-item">
+              <span class="trust-icon">✅</span>
+              <span>Validation score before you build</span>
+            </div>
+          </div>
+        </main>
+
+        <footer class="landing-footer">
+          <p>Powered by UrbanVoice.Ai &nbsp;|&nbsp; We validate before we build.</p>
+        </footer>
+
+      </div>
+      <!-- /screen-landing -->
+
+    </div>
+    <!-- /screen-container -->
+
+  </div>
+  <!-- /app -->
+
+<script src="js/api.js"></script>
+  <script src="js/screens.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
